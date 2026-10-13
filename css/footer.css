@@ -1,0 +1,54 @@
+/* Shared site footer: burgundy block with oversized wordmark, echoing the hero type */
+.site-footer { 
+    margin-top: clamp(14px, 2vw, 28px); 
+    background: var(--burgundy); 
+    color: var(--peach); 
+    border-radius: var(--radius); 
+    padding: var(--pad); 
+    overflow: hidden; 
+}
+
+.footer-top { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 24px; 
+    flex-wrap: wrap; 
+}
+
+.site-footer .logo svg { 
+    color: var(--peach); 
+}
+
+.footer-nav, address { 
+    display: grid; 
+    gap: 8px; 
+    font-style: normal; 
+}
+
+.footer-nav a, address a { 
+    width: fit-content; 
+}
+
+.footer-nav a:hover, address a:hover { 
+    color: var(--white); 
+    text-decoration: underline; 
+    text-underline-offset: 4px; 
+}
+
+.footer-big { 
+    font-size: clamp(3rem, 14vw, 13rem); 
+    font-weight: 700; 
+    text-transform: uppercase; line-height: .9; 
+    color: var(--peach); 
+    text-align: center; 
+    margin: clamp(20px, 4vw, 50px) 0 10px; 
+    white-space: nowrap; 
+}
+
+.copy { 
+    font-size: .8rem; 
+    text-align: center; 
+    opacity: .8; 
+}
+

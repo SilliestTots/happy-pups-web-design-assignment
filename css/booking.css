@@ -1,0 +1,46 @@
+/* Booking call to action */
+.booking { 
+    position: relative; 
+    display: grid; 
+    justify-items: center; 
+    text-align: center; 
+    padding: clamp(50px, 9vw, 120px) 0 clamp(10px, 2vw, 20px); 
+    min-height: 440px; 
+}
+
+.booking-body { 
+    position: relative; 
+    z-index: 1; 
+    display: grid; 
+    justify-items: center; 
+    gap: 14px; 
+}
+
+.booking h2 { 
+    max-width: 11ch; 
+}
+
+.booking p { 
+    font-size: .8rem; 
+    max-width: 30ch; 
+}
+
+.booking .btn-circle { 
+    margin-top: 10px;
+}
+
+.bdog { 
+    position: absolute; 
+    bottom: calc(var(--pad) * -1); 
+    height: clamp(150px, 24vw, 330px); 
+    width: auto; 
+    object-fit: contain; 
+}
+
+.bdog-left { 
+    left: calc(var(--pad) * -1);
+}
+
+.bdog-right { 
+    right: calc(var(--pad) * -1); 
+}

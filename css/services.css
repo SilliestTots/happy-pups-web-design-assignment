@@ -1,0 +1,64 @@
+/* Services: five numbered rows (a real sequence in the reference) */
+.service-list { 
+  display: grid; 
+  border: 1px solid var(--burgundy); 
+  border-radius: 22px; 
+  overflow: hidden; 
+}
+
+.service { 
+  display: grid; 
+  grid-template-columns: 8% 1fr minmax(180px, 24%) 40px; 
+  align-items: center; 
+  gap: 12px;
+  background: var(--cream); 
+  padding: clamp(18px, 2.4vw, 26px) 20px; 
+  transition: background .25s; 
+}
+
+.service-list li + li .service { 
+  border-top: 1px solid var(--burgundy); 
+}
+
+.service .num { 
+  font-size: .8rem; 
+  align-self: start; 
+}
+
+.service h3 { 
+  font-size: clamp(1rem, 1.6vw, 1.25rem); 
+  text-transform: uppercase; 
+  font-weight: 600; 
+  margin-left: 18%; 
+}
+
+.service p { 
+  font-size: .7rem; 
+  line-height: 1.3; 
+}
+
+.service .arrow { 
+  font-size: 1.6rem; 
+  opacity: 0; 
+  transform: translateX(-8px); 
+  transition: .25s; 
+  text-align: right; 
+}
+
+.service:hover, .service:focus-visible, .service.is-active { 
+  background: var(--yellow); 
+}
+.service:hover .arrow, .service:focus-visible .arrow, .service.is-active .arrow { 
+  opacity: 1; 
+  transform: none; 
+}
+
+/* While another row is hovered, the default-highlighted row steps back */
+.service-list:hover .service.is-active:not(:hover) { 
+  background: 
+  var(--cream); 
+}
+
+.service-list:hover .service.is-active:not(:hover) .arrow { 
+  opacity: 0; 
+}
